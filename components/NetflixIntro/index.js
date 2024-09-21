@@ -5,29 +5,15 @@ import { motion } from "framer-motion";
 import { useEffect } from "react";
 import "./splashAnimation.scss";
 
-const TADUM_SOUND_URL =
-  "https://cdn.jsdelivr.net/gh/Th3Wall/assets-cdn/Fakeflix/Fakeflix_TaDum.mp3";
+// const TADUM_SOUND_URL =
+//   "https://cdn.jsdelivr.net/gh/Th3Wall/assets-cdn/Fakeflix/Fakeflix_TaDum.mp3";
 
 const NetflixIntro = () => {
-  // const [play] = useSound(TADUM_SOUND_URL);
-
-  // const soundRef = useRef(null);
-
-  const soundNotification = () => {
-    const sound = new Audio(TADUM_SOUND_URL);
-    const promise = sound.play();
-    if (promise !== undefined) {
-      console.log("log: promise", promise);
-
-      promise.then(() => {}).catch((error) => console.error(error));
-    }
-  };
-
   useEffect(() => {
-    setTimeout(() => {
-      // play();
-      //   soundNotification();
-    }, 3000);
+    // setTimeout(() => {
+    // play();
+    //   soundNotification();
+    // }, 3000);
     setTimeout(() => {
       // navigate("/whos-watching");
     }, 5700);

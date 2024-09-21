@@ -1,9 +1,8 @@
 "use client";
 import { fatherRowData } from "@/data/father";
-import { featuredData } from "@/data/featured";
 import { ourFamilyRowData } from "@/data/ourFamily";
 import { AnimatePresence } from "framer-motion";
-import { Bell, ChevronDown, Info, Play, Search } from "lucide-react";
+import { Bell, ChevronDown, Search } from "lucide-react";
 import NetflixHero from "../NetflixHero";
 import NetflixLogo from "../NetflixLogo";
 import NetflixRow from "./NetflixRow";
@@ -76,33 +75,6 @@ const Header = () => (
       </div>
     </div>
   </header>
-);
-
-const Hero = () => (
-  <div className="relative h-[56.25vw] max-h-[80vh]">
-    <img
-      src={featuredData.src}
-      alt="Featured Content"
-      //   className="w-full h-full object-cover"
-      className="w-full h-full object-fill"
-    />
-    <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black to-transparent">
-      <h1 className="text-4xl md:text-6xl font-bold mb-4">
-        {featuredData.title}
-      </h1>
-      <p className="text-lg md:text-xl mb-4 max-w-2xl">
-        {featuredData.description}
-      </p>
-      <div className="flex space-x-4">
-        <button className="bg-white text-black px-6 py-2 rounded flex items-center hover:bg-opacity-80">
-          <Play className="w-6 h-6 mr-2" /> Play
-        </button>
-        <button className="bg-gray-500 bg-opacity-50 text-white px-6 py-2 rounded flex items-center hover:bg-opacity-40">
-          <Info className="w-6 h-6 mr-2" /> More Info
-        </button>
-      </div>
-    </div>
-  </div>
 );
 
 const Footer = () => (
