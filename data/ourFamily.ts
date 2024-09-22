@@ -1,6 +1,7 @@
 import { NetflixRowProps } from "@/components/NetflixHome/NetflixRow";
 import { Top10ItemProps } from "@/components/NetflixHome/NetflixTopTen";
 
+const dimmedOpacity = 50;
 export const ourFamilyRowData: {
   rowTitle: string;
   rowPosters: NetflixRowProps["data"];
@@ -12,69 +13,72 @@ export const ourFamilyRowData: {
       title: "The ratchet and nerdy",
       src: "_nerdyAndRatchet.jpeg",
       description:
-        "Brandon, Chris, Christian and Los makes up the world's greatest team of brothers. In this action packed adventure",
+        "He watches anime and programs computers, she likes to dress up and go on adventures. Watch as Lovie tries to break Brandon out of his shell and into the real world in this romantic comedy!",
     },
     {
       title: "Double the trouble!",
       src: "_doubleTheTrouble.png",
+      opacity: dimmedOpacity,
       description:
-        "In this light hearted film, watch as Aniyah and Arianna teach Brandon how to turn up!",
+        "Akari and Anela, twins ready to cause mayhem. 2 children, one objective. Watch as this lovable duo take the world by storm",
     },
     {
       title: "Black and Educated",
       src: "_educated.png",
-      opacity: 75,
+      opacity: dimmedOpacity,
       objectFit: "fill",
       description:
-        "In this light hearted film, watch as Aniyah and Arianna teach Brandon how to turn up!",
+        "A documentary following the academic challenges and success of Brandon and Lovie. Get to know the man who became an engineer and the woman who became the valedictorian",
     },
     {
       title: "Explore the world",
       src: "_exploreTheWorld.png",
+      opacity: dimmedOpacity,
       description:
-        "In this light hearted film, watch as Aniyah and Arianna teach Brandon how to turn up!",
+        "Brandon takes his son Akari around the world and teaches him lessons on life, love and everything in between. Watch this thought provoking tale of passion and love",
     },
     {
-      title: "Irving Elegance", // asia
+      title: "007-Irving",
       src: "lovie-13.jpg",
       description:
-        "In this light hearted film, watch as Aniyah and Arianna teach Brandon how to turn up!",
+        "Senior operative Brandon Irving takes Lovie under his wing as a spy in training. She joins him on his toughest mission yet, will they overcome it together?",
     },
     {
-      title: "Warriors in arms", // christian
+      title: "Warriors in arms",
       src: "_warriorsDAA.JPG",
-      opacity: 75,
+      opacity: dimmedOpacity,
       objectFit: "fill",
       description:
-        "In this light hearted film, watch as Aniyah and Arianna teach Brandon how to turn up!",
+        "Brandon and his twin kids are trapped in a world much like their VR video game. Watch as this family overcome all obstacles in an attempt to make it back to their world!",
     },
     {
-      title: "A daughters love",
+      title: "Strong like dad",
       src: "_strongLikeDad.png",
       objectFit: "fill",
       description:
-        "In this light hearted film, watch as Aniyah and Arianna teach Brandon how to turn up!",
+        "Anela takes a liking to fighting and finds out her father is a trained combat specialist. Watch as she trains to become as deadly, if not even deadlier than her father!",
     },
     {
       title: "Thugs in training",
       src: "_theToughGues.png",
+      opacity: dimmedOpacity,
       description:
-        "In this light hearted film, watch as Aniyah and Arianna teach Brandon how to turn up!",
+        "Hardened thug Brandon Irving life changes once his twins come live with him. Watch as he tries to teach them the streets and they teach him to love!",
     },
     {
       title: "Dat's just my baby daddy",
       src: "_lnb.png",
-      opacity: 75,
+      opacity: dimmedOpacity,
       objectFit: "fill",
       description:
-        "In this light hearted film, watch as Aniyah and Arianna teach Brandon how to turn up!",
+        "In this fun loving romantic comedy, Lovie has one rule: No love. She's been hurt too many times to let another man get close. Her rule gets ignored by a man motivated by love.",
     },
     {
       title: "Of all the airs and graces ❤️",
       src: "bae1.png",
-      opacity: 75,
+      opacity: dimmedOpacity,
       description:
-        "In this light hearted film, watch as Aniyah and Arianna teach Brandon how to turn up!",
+        "Heartbreak, reunion, faith and love. We follow the intricate ups and downs of love and how Brandon and Lovie made it work against all odds",
     },
   ],
   top10: {
@@ -83,7 +87,7 @@ export const ourFamilyRowData: {
       {
         title: "Brandon",
         src: "_brandon.JPG",
-
+        priority: true,
         tidbit: "Da Pappy",
       },
 

@@ -8,14 +8,14 @@ import {
   StopCircle,
   Volume2,
   VolumeX,
-} from "lucide-react"; // Volume icons
+} from "lucide-react";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 export default function NetflixHero() {
   const [showVideo, setShowVideo] = useState(false);
-  const [isMuted, setIsMuted] = useState(true); // Mute state
-  const [isPlaying, setIsPlaying] = useState(false); // Playing state
+  const [isMuted, setIsMuted] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
@@ -101,7 +101,7 @@ export default function NetflixHero() {
 
       <div className="absolute bottom-[10%] left-[4%] right-[4%] text-white">
         <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold mb-4">
-          Brandon is having a baby!
+          Brandon & Lovie are having a baby!
         </h1>
         <div className="flex flex-wrap gap-4">
           <button

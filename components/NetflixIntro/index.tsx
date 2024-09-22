@@ -1,26 +1,35 @@
 "use client";
 import { motion } from "framer-motion";
-// import { useRef } from "react";
-// import useSound from "use-sound";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { useGlobalContext } from "../GlobalContext";
 import "./splashAnimation.scss";
-
-// const TADUM_SOUND_URL =
-//   "https://cdn.jsdelivr.net/gh/Th3Wall/assets-cdn/Fakeflix/Fakeflix_TaDum.mp3";
+import StartScreen from "./StartScreen";
 
 const NetflixIntro = () => {
+  const [isOpen, setIsOpen] = useState(true);
   const navigate = useRouter();
+  const {
+    audio: { play },
+  } = useGlobalContext();
+  const enterApp = () => {
+    play();
+    setIsOpen(false);
+  };
   useEffect(() => {
-    // setTimeout(() => {
-    // play();
-    //   soundNotification();
-    // }, 3000);
+    if (isOpen) return;
     setTimeout(() => {
       navigate.replace("/browse");
-    }, 5700);
-  }, [navigate]);
+    }, 5000);
+  }, [navigate, isOpen]);
 
+  if (isOpen) {
+    return (
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+        <StartScreen onEnter={enterApp} />
+      </motion.div>
+    );
+  }
   return (
     <motion.div
       id="SplashAnimation__wrp"
@@ -29,7 +38,6 @@ const NetflixIntro = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      {/* <audio ref={soundRef} src={TADUM_SOUND_URL} /> */}
       <div className="netflixintro" data-letter="N">
         <div className="helper-1">
           <Fur />

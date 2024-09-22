@@ -5,6 +5,7 @@ import { UserCircle2 } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { useGlobalContext } from "./GlobalContext";
 import Modal from "./Modal";
 type Profile = {
   id: number;
@@ -12,41 +13,15 @@ type Profile = {
   avatar?: string;
   description?: string;
 };
-// Mock data for user profiles
-const profiles: Profile[] = [
-  {
-    id: 1,
-    name: "Alyssa",
-    avatar: "alyssa.JPG",
-    description: "Naaah, not that i know of",
-  },
-  {
-    id: 2,
-    name: "Chris",
-    avatar: "chris.png",
-    description: "Who knows? I don't",
-  },
-  {
-    id: 3,
-    name: "Brandon",
-    avatar: "brandon.png",
-    description: "...Do you really want to know? Press enter to see!",
-  },
-  {
-    id: 4,
-    name: "Christian",
-    avatar: "christian.png",
-    description: "LOL I wish",
-  },
-  { id: 5, name: "Someone else" },
-];
 
 export default function WhosExpecting() {
   const [isOpen, setIsOpen] = useState(false);
   const [isHintOpen, setIsHintOpen] = useState(false);
   const [selectedProfile, setSelectedProfile] = useState<null | Profile>(null);
   const navigate = useRouter();
-
+  const {
+    audio: { pause },
+  } = useGlobalContext();
   const handleProfileSelect = (profile: Profile) => {
     setSelectedProfile(profile);
   };
@@ -68,6 +43,7 @@ export default function WhosExpecting() {
   }
 
   function goToHome() {
+    pause();
     navigate.push("/home");
   }
 
@@ -133,3 +109,31 @@ export default function WhosExpecting() {
     </motion.div>
   );
 }
+
+const profiles: Profile[] = [
+  {
+    id: 1,
+    name: "Alyssa",
+    avatar: "alyssa.JPG",
+    description: "Naaah, not that i know of",
+  },
+  {
+    id: 2,
+    name: "Chris",
+    avatar: "chris.png",
+    description: "Who knows? I don't",
+  },
+  {
+    id: 3,
+    name: "Brandon",
+    avatar: "brandon.png",
+    description: "...Do you really want to know? Press enter to see!",
+  },
+  {
+    id: 4,
+    name: "Christian",
+    avatar: "christian.png",
+    description: "LOL I wish",
+  },
+  { id: 5, name: "Someone else" },
+];

@@ -23,7 +23,6 @@ const NetflixRow = ({ title, data }: NetflixRowProps) => {
   const [showLeftArrow, setShowLeftArrow] = useState(false);
   const [showRightArrow, setShowRightArrow] = useState(true);
 
-  // Smooth scroll logic using requestAnimationFrame
   const smoothScrollTo = (start: number, end: number, duration: number) => {
     const startTime = performance.now();
 
@@ -31,7 +30,7 @@ const NetflixRow = ({ title, data }: NetflixRowProps) => {
       const timeElapsed = currentTime - startTime;
       const progress = Math.min(timeElapsed / duration, 1);
       const easeInOutQuad = (t: number) =>
-        t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t; // Easing function
+        t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
       const amountToScroll = start + (end - start) * easeInOutQuad(progress);
       if (rowPostersRef.current) {
         rowPostersRef.current.scrollLeft = amountToScroll;
@@ -40,7 +39,7 @@ const NetflixRow = ({ title, data }: NetflixRowProps) => {
       if (progress < 1) {
         window.requestAnimationFrame(scrollStep);
       } else {
-        getScrollVal(); // Ensure arrow visibility is updated
+        getScrollVal();
       }
     };
 
@@ -48,7 +47,7 @@ const NetflixRow = ({ title, data }: NetflixRowProps) => {
   };
 
   const scrollL = () => {
-    const step = window.outerWidth / 2;
+    const step = window.innerWidth;
     smoothScrollTo(
       rowPostersRef.current?.scrollLeft || 0,
       (rowPostersRef.current?.scrollLeft || 0) - step,
@@ -57,7 +56,7 @@ const NetflixRow = ({ title, data }: NetflixRowProps) => {
   };
 
   const scrollR = () => {
-    const step = window.outerWidth / 2;
+    const step = window.innerWidth;
     smoothScrollTo(
       rowPostersRef.current?.scrollLeft || 0,
       (rowPostersRef.current?.scrollLeft || 0) + step,
@@ -75,7 +74,7 @@ const NetflixRow = ({ title, data }: NetflixRowProps) => {
   };
 
   useEffect(() => {
-    getScrollVal(); // Initialize arrow visibility on component mount
+    getScrollVal();
   }, []);
 
   return (
@@ -128,7 +127,7 @@ const NetflixRow = ({ title, data }: NetflixRowProps) => {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          whileTap={{ scale: 0.9, rotate: -15 }} // Add a bounce effect on click
+          whileTap={{ scale: 0.9, rotate: -15 }}
         >
           <ChevronLeft className="w-6 h-6 text-white" />
         </motion.div>
@@ -141,7 +140,7 @@ const NetflixRow = ({ title, data }: NetflixRowProps) => {
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          whileTap={{ scale: 0.9, rotate: 15 }} // Add a bounce effect on click
+          whileTap={{ scale: 0.9, rotate: 15 }}
         >
           <ChevronRight className="w-6 h-6 text-white" />
         </motion.div>

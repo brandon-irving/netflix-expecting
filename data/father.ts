@@ -28,40 +28,40 @@ export const fatherRowData: {
         "In this light hearted film, watch as Aniyah and Arianna teach Brandon how to turn up!",
     },
     {
-      title: "Pride and joy", // asia
+      title: "Pride and joy",
       src: "_prideAndJoy.png",
       description:
-        "In this light hearted film, watch as Aniyah and Arianna teach Brandon how to turn up!",
+        "Follow Asia Irving as her journey from Highschool to College athlete begins. With her Brothers support and guidance she's ready for any challenge!",
     },
     {
-      title: "How to become a millionaire", // christian
+      title: "How to become a millionaire",
       src: "christianAndBrandon1.png",
       description:
-        "In this light hearted film, watch as Aniyah and Arianna teach Brandon how to turn up!",
+        "These 2 brilliant minds come together and take the world by storm, in this serious drama. Watch as Brandon and Christian take on the coorporate elites and become Millionaires!",
     },
     {
-      title: "Life of the party", // los
+      title: "Life of the party",
       src: "_lifeOfTheParty.png",
       description:
-        "In this light hearted film, watch as Aniyah and Arianna teach Brandon how to turn up!",
+        "Can't nobody party like an Irving! Watch as the older Irving kids get litty!",
     },
     {
-      title: "My brothers keeper", // Shawana
+      title: "My brothers keeper",
       src: "_myBrothersKeeper.JPG",
       description:
-        "In this light hearted film, watch as Aniyah and Arianna teach Brandon how to turn up!",
+        "Shawana gives it her all to keep her brother Brandon out of trouble in this action packed comedy!",
     },
     {
-      title: "Orlando's finest", // Alyssa
+      title: "Orlando's finest",
       src: "_orlandosFinest.png",
       description:
-        "In this light hearted film, watch as Aniyah and Arianna teach Brandon how to turn up!",
+        "Orlando is not ready for the dynamic duo, Brandon and Alyssa. In this nail biting suspense, watch as this brother and sister take control of the city!",
     },
     {
-      title: "A family made of diamonds", // Family
+      title: "A family made of diamonds",
       src: "_familyOfDiamonds.png",
       description:
-        "In this light hearted film, watch as Aniyah and Arianna teach Brandon how to turn up!",
+        "From talent, to brains. From brawn to beauty. This family has it all! Watch as you get to know the family of diamonds in this heart warming documentary",
     },
   ],
   top10: {
