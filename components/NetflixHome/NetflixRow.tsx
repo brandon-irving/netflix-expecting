@@ -99,11 +99,11 @@ const NetflixRow = ({ title, data }: NetflixRowProps) => {
                 width={307}
                 src={getImageUrl(poster.src)}
                 alt="movieImage"
-                className={`object-${
-                  poster.objectFit || "cover"
-                } h-[230px] w-[307px] transition-opacity duration-300 group-hover:opacity-30 opacity-${
-                  poster.opacity || 1
-                }`}
+                className={`h-[230px] w-[307px] transition-opacity duration-300 group-hover:opacity-30`}
+                style={{
+                  objectFit: poster.objectFit || "cover",
+                  opacity: poster.opacity || 1,
+                }}
                 blurDataURL={getImageUrl(poster.src)}
                 placeholder="blur"
               />

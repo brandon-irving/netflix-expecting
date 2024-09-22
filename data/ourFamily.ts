@@ -1,7 +1,7 @@
 import { NetflixRowProps } from "@/components/NetflixHome/NetflixRow";
 import { Top10ItemProps } from "@/components/NetflixHome/NetflixTopTen";
 
-const dimmedOpacity = 50;
+const dimmedOpacity = 0.7;
 export const ourFamilyRowData: {
   rowTitle: string;
   rowPosters: NetflixRowProps["data"];

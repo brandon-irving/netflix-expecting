@@ -22,6 +22,7 @@ export default function WhosExpecting() {
   const {
     audio: { pause },
   } = useGlobalContext();
+
   const handleProfileSelect = (profile: Profile) => {
     setSelectedProfile(profile);
   };
@@ -31,7 +32,11 @@ export default function WhosExpecting() {
     setIsOpen(false);
   }
   function handleOpen(profile: Profile) {
-    if (!profile.avatar) return;
+    if (!profile.avatar) {
+      handleProfileSelect(profile);
+      setIsHintOpen(true);
+      return;
+    }
     handleProfileSelect(profile);
     setIsOpen(true);
   }
@@ -40,6 +45,7 @@ export default function WhosExpecting() {
   }
   function handleCloseHint() {
     setIsHintOpen(false);
+    setSelectedProfile(null);
   }
 
   function goToHome() {
@@ -96,8 +102,11 @@ export default function WhosExpecting() {
       <Modal
         onClose={handleCloseHint}
         isOpen={isHintOpen}
-        title={"Here's a hint!"}
-        description={"They love Mega Man, programming and red velvet cake!"}
+        title={selectedProfile?.name ? "Hmmm..." : "Here's a hint!"}
+        description={
+          (selectedProfile?.name ? "It could be... but here's a hint! " : "") +
+          "They love Mega Man, programming and red velvet cake!"
+        }
       />
       <Modal
         onClose={handleClose}
