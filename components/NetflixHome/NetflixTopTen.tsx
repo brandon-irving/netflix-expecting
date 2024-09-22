@@ -6,8 +6,9 @@ export type Top10ItemProps = {
   title: string;
   src: string;
   tidbit: string;
+  priority?: boolean;
 };
-const Top10Item = ({ rank, title, src, tidbit }: Top10ItemProps) => (
+const Top10Item = ({ priority, rank, title, src, tidbit }: Top10ItemProps) => (
   <div className="relative flex-shrink-0 w-[230px] h-[260px] mr-2">
     <div
       id="rank"
@@ -34,6 +35,7 @@ const Top10Item = ({ rank, title, src, tidbit }: Top10ItemProps) => (
         </video>
       ) : (
         <Image
+          priority={priority}
           height={260}
           width={173}
           src={getImageUrl(src)}
