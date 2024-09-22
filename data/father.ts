@@ -1,57 +1,65 @@
-export const fatherRowData = {
+import { NetflixRowProps } from "@/components/NetflixHome/NetflixRow";
+import { Top10ItemProps } from "@/components/NetflixHome/NetflixTopTen";
+
+export const fatherRowData: {
+  rowTitle: string;
+  rowPosters: NetflixRowProps["data"];
+  top10: { title: string; data: Top10ItemProps[] };
+} = {
   rowTitle: "Daddy's Home",
   rowPosters: [
     {
+      priority: true,
       title: "Irving Boys",
-      src: "/images/_lifeOfTheParty.png",
+      src: "brothers1.png",
       description:
         "Brandon, Chris, Christian and Los makes up the world's greatest team of brothers. In this action packed adventure",
     },
     {
       title: "Never too old to turn up!",
-      src: "/images/_lifeOfTheParty.png",
+      src: "bAndAriAndNiyah.png",
       description:
         "In this light hearted film, watch as Aniyah and Arianna teach Brandon how to turn up!",
     },
     {
       title: "A mother's love",
-      src: "/images/_lifeOfTheParty.png",
+      src: "momAndB.png",
       description:
         "In this light hearted film, watch as Aniyah and Arianna teach Brandon how to turn up!",
     },
     {
       title: "Pride and joy", // asia
-      src: "/images/_lifeOfTheParty.png",
+      src: "_prideAndJoy.png",
       description:
         "In this light hearted film, watch as Aniyah and Arianna teach Brandon how to turn up!",
     },
     {
       title: "How to become a millionaire", // christian
-      src: "/images/_lifeOfTheParty.png",
+      src: "christianAndBrandon1.png",
       description:
         "In this light hearted film, watch as Aniyah and Arianna teach Brandon how to turn up!",
     },
     {
       title: "Life of the party", // los
-      src: "/images/_lifeOfTheParty.png",
+      src: "_lifeOfTheParty.png",
       description:
         "In this light hearted film, watch as Aniyah and Arianna teach Brandon how to turn up!",
     },
     {
       title: "My brothers keeper", // Shawana
-      src: "/images/_lifeOfTheParty.png",
+      src: "_myBrothersKeeper.JPG",
       description:
         "In this light hearted film, watch as Aniyah and Arianna teach Brandon how to turn up!",
     },
     {
       title: "Orlando's finest", // Alyssa
-      src: "/images/_lifeOfTheParty.png",
+      src: "_orlandosFinest.png",
       description:
         "In this light hearted film, watch as Aniyah and Arianna teach Brandon how to turn up!",
     },
     {
       title: "A family made of diamonds", // Family
-      src: "/images/_lifeOfTheParty.png",
+      src: "_familyOfDiamonds.png",
       description:
         "In this light hearted film, watch as Aniyah and Arianna teach Brandon how to turn up!",
     },
@@ -61,79 +69,68 @@ export const fatherRowData = {
     data: [
       {
         title: "Mommy",
-        src: "/images/_lifeOfTheParty.png",
-        description:
-          "In this light hearted film, watch as Aniyah and Arianna teach Brandon how to turn up!",
+        src: "mommy1.png",
+
         tidbit: "The GOAT",
       },
       {
         title: "Brandon",
-        src: "/images/_lifeOfTheParty.png",
-        description:
-          "In this light hearted film, watch as Aniyah and Arianna teach Brandon how to turn up!",
+        src: "_brandon.MOV",
+
         tidbit: "The Tech Head",
       },
       {
         title: "Shawana",
-        src: "/images/_lifeOfTheParty.png",
-        description:
-          "In this light hearted film, watch as Aniyah and Arianna teach Brandon how to turn up!",
+        src: "_shawana.JPG",
+
         tidbit: "The Firecracker",
       },
       {
         title: "Alyssa",
-        src: "/images/_lifeOfTheParty.png",
-        description:
-          "In this light hearted film, watch as Aniyah and Arianna teach Brandon how to turn up!",
+        src: "alyssa.JPG",
+
         tidbit: "The Smarty",
       },
       {
         title: "Chris",
-        src: "/images/_lifeOfTheParty.png",
-        description:
-          "In this light hearted film, watch as Aniyah and Arianna teach Brandon how to turn up!",
+        src: "_chris.jpeg",
+
         tidbit: "The Free Spirit",
       },
       {
         title: "Christian",
-        src: "/images/_lifeOfTheParty.png",
-        description:
-          "In this light hearted film, watch as Aniyah and Arianna teach Brandon how to turn up!",
+        src: "_christian.png",
+
         tidbit: "The Focused One",
       },
       {
         title: "Carlos",
-        src: "/images/_lifeOfTheParty.png",
-        description:
-          "In this light hearted film, watch as Aniyah and Arianna teach Brandon how to turn up!",
+        src: "_los.JPG",
+
         tidbit: "The Baby Boy",
       },
       {
         title: "Aaliyah",
-        src: "/images/_lifeOfTheParty.png",
-        description:
-          "In this light hearted film, watch as Aniyah and Arianna teach Brandon how to turn up!",
+        src: "_liyah.JPG",
+
         tidbit: "The Fun One",
       },
       {
         title: "Asia",
-        src: "/images/_lifeOfTheParty.png",
-        description:
-          "In this light hearted film, watch as Aniyah and Arianna teach Brandon how to turn up!",
+        src: "_asia.png",
+
         tidbit: "The Talented One",
       },
       {
         title: "Aniyah",
-        src: "/images/_lifeOfTheParty.png",
-        description:
-          "In this light hearted film, watch as Aniyah and Arianna teach Brandon how to turn up!",
+        src: "_aniyah.png",
+
         tidbit: "The Lovable One",
       },
       {
         title: "Arianna",
-        src: "/images/_lifeOfTheParty.png",
-        description:
-          "In this light hearted film, watch as Aniyah and Arianna teach Brandon how to turn up!",
+        src: "_ariana.png",
+
         tidbit: "The Baby Girl",
       },
     ],

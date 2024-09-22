@@ -1,6 +1,7 @@
+import { getImageUrl, getVideoUrl } from "@/data/bucket";
 import Image from "next/image";
 
-type Top10ItemProps = {
+export type Top10ItemProps = {
   rank?: number;
   title: string;
   src: string;
@@ -22,18 +23,20 @@ const Top10Item = ({ rank, title, src, tidbit }: Top10ItemProps) => (
     <div id="src" className=" z-2 absolute inset-y-0 right-0 w-[75%]">
       {src.includes(".MOV") ? (
         <video
-          src={src}
+          src={getVideoUrl(src)}
           autoPlay
           muted
           loop
+          playsInline
           className="w-full h-full object-cover"
         >
           Your browser does not support the video tag.
         </video>
       ) : (
         <Image
-          fill
-          src={src}
+          height={260}
+          width={173}
+          src={getImageUrl(src)}
           alt={title}
           className="w-full h-full object-cover rounded-md"
         />

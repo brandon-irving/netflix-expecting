@@ -1,3 +1,4 @@
+import { getImageUrl } from "@/data/bucket";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
@@ -7,9 +8,12 @@ type MovieData = {
   src: string;
   title: string;
   description: string;
+  priority?: boolean;
+  objectFit?: "fill" | "contain" | "cover" | "none" | "scale-down";
+  opacity?: number;
 };
 
-type NetflixRowProps = {
+export type NetflixRowProps = {
   title: string;
   data?: MovieData[];
 };
@@ -91,11 +95,18 @@ const NetflixRow = ({ title, data }: NetflixRowProps) => {
           >
             <div className="relative overflow-hidden group">
               <Image
+                priority={poster.priority}
                 height={230}
                 width={307}
-                src={poster.src}
+                src={getImageUrl(poster.src)}
                 alt="movieImage"
-                className="object-cover h-[230px] w-[307px] transition-opacity duration-300 group-hover:opacity-30 opacity-75"
+                className={`object-${
+                  poster.objectFit || "cover"
+                } h-[230px] w-[307px] transition-opacity duration-300 group-hover:opacity-30 opacity-${
+                  poster.opacity || 1
+                }`}
+                blurDataURL={getImageUrl(poster.src)}
+                placeholder="blur"
               />
               <motion.h5 className="absolute bottom-4 left-4 text-white text-2xl font-bold group-hover:opacity-0 opacity-100 transition-opacity">
                 {poster.title}

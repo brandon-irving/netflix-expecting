@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 // import { useRef } from "react";
 // import useSound from "use-sound";
+import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import "./splashAnimation.scss";
 
@@ -9,15 +10,16 @@ import "./splashAnimation.scss";
 //   "https://cdn.jsdelivr.net/gh/Th3Wall/assets-cdn/Fakeflix/Fakeflix_TaDum.mp3";
 
 const NetflixIntro = () => {
+  const navigate = useRouter();
   useEffect(() => {
     // setTimeout(() => {
     // play();
     //   soundNotification();
     // }, 3000);
     setTimeout(() => {
-      // navigate("/whos-watching");
+      navigate.replace("/browse");
     }, 5700);
-  }, []);
+  }, [navigate]);
 
   return (
     <motion.div
