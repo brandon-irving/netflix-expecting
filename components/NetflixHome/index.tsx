@@ -156,7 +156,7 @@ const Footer = () => (
         Made with <span className="text-red-600">❤️</span> by the father Brandon
         Irving
       </p>
-      {/* <p className="mt-5 text-center">
+      <p className="mt-5 text-center">
         <a
           target="_blank"
           className="px-6 py-3 bg-gradient-to-r from-pink-300 to-blue-300 text-black font-bold rounded-full shadow-lg transition transform hover:scale-105 hover:bg-gradient-to-l"
@@ -164,7 +164,7 @@ const Footer = () => (
         >
           Checkout the gender reveal!
         </a>
-      </p> */}
+      </p>
     </div>
   </footer>
 );
